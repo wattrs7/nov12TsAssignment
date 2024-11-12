@@ -276,3 +276,5 @@ Remember: Document any extra features you add in your README.md!
 Good luck with your first React assignment! 🚀
 
 ![Alt text](/Users/robertwatt/Desktop/cmu/cmuCodeCamp/nov12Assign/workingBlog.png)
+![alt text](src/SkinnyScreen.png)
+![alt text](src/FatScreen.png)
