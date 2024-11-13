@@ -20,7 +20,7 @@ function BlogList({posts}){
     )
 }
 
-BlogList.propTypes ={
+BlogList.PropTypes ={
     posts: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.number.required,
@@ -30,7 +30,7 @@ BlogList.propTypes ={
           date: PropTypes.string.required,
           readTime: PropTypes.number.required
         })
-      ).required
+      )
     };
 
     export default BlogList
