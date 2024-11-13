@@ -6,6 +6,7 @@ import './App.css'
 function App() {
   return (
     <div className="app">
+      <p>what in the fing f</p>
       <Header />
       <main className="main-content">
         <BlogList posts={posts}/>
