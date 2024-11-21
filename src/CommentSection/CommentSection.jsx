@@ -1,26 +1,26 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-//import './CommentSection.css';
-
-function CommentSection({ postId }){
-    const [comments, setComments] = useState([])
-    const [newComment, setNewComment] = useState('')
-    const [isExpanded, setIsExpanded] = useState(false)
+import './CommentSection.css';
 
 
-const handleSubmit = (e) => {
-    e.preventDefault()
-    if(!newComment.trim()) return;
+function CommentSection({ postId }) {
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState('');
+  const [isExpanded, setIsExpanded] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!newComment.trim()) return;
 
-setComments(prevComments => [...prevComments, {
-    id: Date.now(),
-    text: newComment,
-    timestamp: new Date().toISOString()
-}])
-setNewComment('');
-}
-return (
+    setComments(prevComments => [...prevComments, {
+      id: Date.now(),
+      text: newComment,
+      timestamp: new Date().toISOString()
+    }]);
+    setNewComment('');
+  };
+
+  return (
     <div className="comment-section">
       <button 
         className="comment-section__toggle"
@@ -50,7 +50,7 @@ return (
 
           <div className="comments-list">
             {comments.map(comment => (
-              <div key={comment.id} className="comment">
+              <div key={comment.id} id='commentid' className="comment">
                 <p className="comment__text">{comment.text}</p>
                 <span className="comment__timestamp">
                   {new Date(comment.timestamp).toLocaleString()}
@@ -63,9 +63,9 @@ return (
     </div>
   );
 }
- 
-  CommentSection.propTypes = {
-    postId: PropTypes.number.isRequired
-  };
-  
-  export default CommentSection;
+
+CommentSection.propTypes = {
+  postId: PropTypes.number.isRequired
+};
+
+export default CommentSection;

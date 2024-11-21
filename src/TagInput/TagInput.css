@@ -1,0 +1,37 @@
+/* TagInput.css */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .tag-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+  }
+  
+  .tag-input.error {
+    border-color: #ff4d4f;
+  }
+  
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
